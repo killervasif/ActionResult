@@ -12,6 +12,7 @@ namespace MyMiddleWebServer.WebHost
         public void Configure(MiddlewareBuilder builder)
         {
             builder.Use<LoggerMiddleware>();
+            builder.Use<MvcMiddleware>();
             builder.Use<StaticFileMiddleware>();
         }
     }

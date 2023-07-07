@@ -16,7 +16,7 @@ public class MvcMiddleware : IMiddleware
         {
             var sections = url.Split('/', StringSplitOptions.RemoveEmptyEntries);
             var controller = sections[0].First().ToString().ToUpper(CultureInfo.InvariantCulture) + string.Join("", sections[0].Skip(1));
-            var controllerName = $"ActionResultExample.Controllers.{controller}Controller";
+            var controllerName = $"MyMiddleWebServer.Controllers.{controller}Controller";
             Assembly assembly = Assembly.GetExecutingAssembly();
             Type? type = assembly.GetType(controllerName);
             if (type != null)
